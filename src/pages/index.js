@@ -1,7 +1,8 @@
 import { useTasks } from '../context/taskContext';
 
 const Home = () => {
-  const { hello, greet } = useTasks();
+  const { tasks } = useTasks();
+  console.log(tasks);
 
   return <div>Hello World</div>;
 };

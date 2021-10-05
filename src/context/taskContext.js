@@ -1,20 +1,15 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 export const TaskContext = createContext();
 
-export const useTasks = () => {
-  const context = useContext(TaskContext);
-  return context;
-};
+export const useTasks = () => useContext(TaskContext);
 
 export const TasksProvider = ({ children }) => {
-  let hello = 'world';
-
-  const greet = (name) => `Hello ${name}`;
+  const [tasks, estTasks] = useState([
+    { id: '1', title: 'fisrt task', description: 'first description' },
+  ]);
 
   return (
-    <TaskContext.Provider value={{ hello, greet }}>
-      {children}
-    </TaskContext.Provider>
+    <TaskContext.Provider value={{ tasks }}>{children}</TaskContext.Provider>
   );
 };
