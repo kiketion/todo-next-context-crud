@@ -1,4 +1,4 @@
-#ToDo is a CRUD app created with Next.js & styled with Tailwind CSS
+# ToDo is a CRUD app created with Next.js & styled with Tailwind CSS
 
 This is a [Next.js](https://nextjs.org/) project stylized with Tailwind CSS, created under the CRUD methodology (Create, Read, Update and Delete)
 
